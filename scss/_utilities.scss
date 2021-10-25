@@ -6,12 +6,14 @@ $utilities: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
 $utilities: map-merge(
   (
+    
     // scss-docs-start utils-vertical-align
     "align": (
       property: vertical-align,
       class: align,
       values: baseline top middle bottom text-bottom text-top
     ),
+    
     // scss-docs-end utils-vertical-align
     // scss-docs-start utils-float
     "float": (
@@ -514,19 +516,16 @@ $utilities: map-merge(
     "color": (
       property: color,
       class: text,
-      local-vars: (
-        "text-opacity": 1
-      ),
       values: map-merge(
         $utilities-text-colors,
         (
           "muted": $text-muted,
-          "black-50": rgba($black, .5), // deprecated
-          "white-50": rgba($white, .5), // deprecated
           "reset": inherit,
         )
       )
     ),
+    
+    /*
     "text-opacity": (
       css-var: true,
       class: text-opacity,
@@ -537,14 +536,13 @@ $utilities: map-merge(
         100: 1
       )
     ),
+    */
     // scss-docs-end utils-color
     // scss-docs-start utils-bg-color
+    
     "background-color": (
       property: background-color,
       class: bg,
-      local-vars: (
-        "bg-opacity": 1
-      ),
       values: map-merge(
         $utilities-bg-colors,
         (
@@ -552,6 +550,7 @@ $utilities: map-merge(
         )
       )
     ),
+    /*
     "bg-opacity": (
       css-var: true,
       class: bg-opacity,
@@ -563,12 +562,14 @@ $utilities: map-merge(
         100: 1
       )
     ),
+    */
+    
     // scss-docs-end utils-bg-color
-    "gradient": (
+    /*"gradient": (
       property: background-image,
       class: bg,
       values: (gradient: var(--#{$variable-prefix}gradient))
-    ),
+    ),*/
     // scss-docs-start utils-interaction
     "user-select": (
       property: user-select,
